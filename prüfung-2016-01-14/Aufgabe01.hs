@@ -10,11 +10,13 @@ knz = "E 033 534"                   {- Studienkennzahl -}
 t1 = ["p1", (drop 9.show) mnr, (head.words.(let no n = name; in no))"No"]
 
 t2 = (\x y z a -> ((x.y)z, (y.x)z));
+{-  -}
 
 t3 = t2 reverse (take 3) mnr (drop 3)
 
 t4 = ((drop 4) [[i-2] | i <- mnr], [i | i <- mnr, i > 3])
-
+{- ((drop 4)[[-1],[0],[1],[2],[3],[4],[5]],[4,5,6,7]) -}
+{- [[3],[4],[5]],[4,5,6,7]) -}
 t5 = take 4 [[i | j<- [i..5]] | i <- mnr]
 
 ml _ = (tail.tail.reverse.tail)

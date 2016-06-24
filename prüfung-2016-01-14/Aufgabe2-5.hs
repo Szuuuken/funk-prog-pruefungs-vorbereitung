@@ -3,7 +3,8 @@ module Pruefung160114 where
 {-
 Aufgabe 2
 Definieren Sie einen polymorphen algebraischen Datentyp BTplus zur Darstellung von binären Bäumen.
-Knoten enthalten neben zwei (unabhängigen) polymorphen Elementen zwei Unterbäume. Weiters gibt es auch leere Bäume und leere Unterbäume
+Knoten enthalten neben zwei (unabhängigen) polymorphen Elementen zwei Unterbäume.
+Weiters gibt es auch leere Bäume und leere Unterbäume
 -}
 
 data BTplus a b = Nil | Node a b (BTplus a b) (BTplus a b)
